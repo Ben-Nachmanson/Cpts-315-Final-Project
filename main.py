@@ -82,7 +82,6 @@ def calculate_percent_change(company):
 def plot_stock_prices():
     start = "2021-04-01"
     end = '2021-5-01'
-    
     goog = yf.download('GOOG',start,end)
     pChangeGoogle = calculate_percent_change(goog) 
          
@@ -149,8 +148,9 @@ def plot_stock_prices():
     plt.text('2021-04-1',140, str(round(avg_pos_walmart*100,2)) +"% Positive, "+ str(round(avg_neu_walmart*100,2)) +"% Neutral, " + str(round(avg_neg_walmart*100,2))+"% Negative")
     plt.text('2021-04-1',140.5, "Sentiment Analysis of Walmart CNN articles")
 
-    plt.show()        
-       
+    plt.show()   
+
+              
 if __name__ == '__main__':
     urls = {}
     google = [] 
